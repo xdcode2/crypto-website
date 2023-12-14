@@ -1,0 +1,63 @@
+.header__menu-icon {
+    display: none !important;
+    position: relative;
+    width: 20px;
+    height: 14px;
+    flex-shrink: 0;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.header__menu-icon span {
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 0.5px;
+    background-color: var(--white-50);
+    transition: all 200ms ease;
+}
+
+.header__menu-icon span:nth-child(1) {
+    top: 0;
+    left: 0;
+    transform: translateX(0);
+}
+
+.header__menu-icon span:nth-child(2) {
+    top: 6.5px;
+    left: 0;
+    transform: translateX(8px);
+}
+
+.header__menu-icon span:nth-child(3) {
+    top: 13px;
+    left: 0;
+    transform: translateX(4px);
+}
+
+.header__menu-icon:hover:not(.active) span:nth-child(1) {
+    transform: translateX(4px);
+}
+
+.header__menu-icon:hover:not(.active) span:nth-child(2) {
+    transform: translateX(0);
+}
+
+.header__menu-icon:hover:not(.active) span:nth-child(3) {
+    transform: translateX(8px);
+}
+
+.header__menu-icon.active span:nth-child(1) {
+    top: 6.5px;
+    transform: translateX(0) rotate(225deg);
+}
+
+.header__menu-icon.active span:nth-child(2) {
+    top: 6.5px;
+    transform: translateX(20px);
+}
+
+.header__menu-icon.active span:nth-child(3) {
+    top: 6.5px;
+    transform: translateX(0) rotate(135deg);
+}
